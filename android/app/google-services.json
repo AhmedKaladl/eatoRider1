@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "524859791727",
+    "project_id": "clear-scene-354922",
+    "storage_bucket": "clear-scene-354922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524859791727:android:e78ba6b4300229f491b09a",
+        "android_client_info": {
+          "package_name": "com.eatoly.eato_food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524859791727-v3v18jb4385snd0mj2ecs55qtsp1jok6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eatoly.eato_food",
+            "certificate_hash": "bba5ae1e2696892ef426c93f02eea93e04749db3"
+          }
+        },
+        {
+          "client_id": "524859791727-50mg0le15hp2gharpqvki91tnv8s4mkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZkZuii9sqNPf0lgnUgXuoxtnTNm6MAhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524859791727-50mg0le15hp2gharpqvki91tnv8s4mkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524859791727:android:2e4160545db1b86b91b09a",
+        "android_client_info": {
+          "package_name": "com.eatoly.eato_food_delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524859791727-50mg0le15hp2gharpqvki91tnv8s4mkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZkZuii9sqNPf0lgnUgXuoxtnTNm6MAhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524859791727-50mg0le15hp2gharpqvki91tnv8s4mkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
