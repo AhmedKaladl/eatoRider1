@@ -95,13 +95,15 @@ class OrderProductWidget extends StatelessWidget {
 
       addOnText.isNotEmpty ? Padding(
         padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
-        child: Row(children: [
+        child: Column(children: [
           const SizedBox(width: 60),
           Text('${'addons'.tr}: ', style: IBMPlexSansArabicMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
-          Flexible(child: Text(
+          Row(children: [
+            Image.asset(Images.sodaCan,  height: 40, width: 40,),
+            Text(
               addOnText,
               style: IBMPlexSansArabicRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor,
-          ))),
+          ))]),
         ]),
       ) : const SizedBox(),
 

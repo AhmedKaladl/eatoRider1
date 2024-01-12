@@ -125,7 +125,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
           if(order != null && orderController.orderDetailsModel != null ) {
             // subscription = order.subscriptionId != null && orderController.subscriptionModel != null;
 
-            if(order.orderType == 'delivery') {
+            if(order.orderType == 'delivery' || order.orderType == 'wdelivery') {
               deliveryCharge = order.deliveryCharge;
               dmTips = order.dmTips;
             }
@@ -393,13 +393,13 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                   // Total
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('item_price'.tr, style: IBMPlexSansArabicRegular),
-                    Text(PriceConverter.convertPrice(itemsPrice), style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text(PriceConverter.convertPrice(itemsPrice), style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ]),
                   const SizedBox(height: 10),
 
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('addons'.tr, style: IBMPlexSansArabicRegular),
-                    Text('(+) ${PriceConverter.convertPrice(addOns)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr,),
+                    Text('(+) ${PriceConverter.convertPrice(addOns)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl,),
                   ]),
 
                   Divider(thickness: 1, color: Theme.of(context).hintColor.withOpacity(0.5)),
@@ -412,14 +412,14 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
 
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('discount'.tr, style: IBMPlexSansArabicRegular),
-                    Text('(-) ${PriceConverter.convertPrice(discount)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text('(-) ${PriceConverter.convertPrice(discount)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ]),
                   const SizedBox(height: 10),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('delivery_man_tips'.tr, style: IBMPlexSansArabicRegular),
-                    Text('(+) ${PriceConverter.convertPrice(dmTips)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text('(+) ${PriceConverter.convertPrice(dmTips)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ],
                   ),
                   const SizedBox(height: 10),
@@ -428,26 +428,26 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     Text('coupon_discount'.tr, style: IBMPlexSansArabicRegular),
                     Text(
                       '(-) ${PriceConverter.convertPrice(couponDiscount)}',
-                      style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr,
+                      style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl,
                     ),
                   ]) : const SizedBox(),
                   SizedBox(height: couponDiscount > 0 ? 10 : 0),
 
                   !taxIncluded ? Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('vat_tax'.tr, style: IBMPlexSansArabicRegular),
-                    Text('(+) ${PriceConverter.convertPrice(tax)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text('(+) ${PriceConverter.convertPrice(tax)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ]) : const SizedBox(),
                   SizedBox(height: taxIncluded ? 0 : 10),
 
                   (order.additionalCharge != null && order.additionalCharge! > 0) ? Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text(Get.find<SplashController>().configModel!.additionalChargeName!, style: IBMPlexSansArabicRegular),
-                    Text('(+) ${PriceConverter.convertPrice(order.additionalCharge)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text('(+) ${PriceConverter.convertPrice(order.additionalCharge)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ]) : const SizedBox(),
                   (order.additionalCharge != null && order.additionalCharge! > 0) ? const SizedBox(height: 10) : const SizedBox(),
 
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('delivery_fee'.tr, style: IBMPlexSansArabicRegular),
-                    Text('(+) ${PriceConverter.convertPrice(deliveryCharge)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.ltr),
+                    Text('(+) ${PriceConverter.convertPrice(deliveryCharge)}', style: IBMPlexSansArabicRegular, textDirection: TextDirection.rtl),
                   ]),
 
                   Padding(
@@ -504,7 +504,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,
                     )),
                     Text(
-                      PriceConverter.convertPrice(total), textDirection: TextDirection.ltr,
+                      PriceConverter.convertPrice(total), textDirection: TextDirection.rtl,
                       style: IBMPlexSansArabicMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
                     ),
                   ]) : const SizedBox(),
