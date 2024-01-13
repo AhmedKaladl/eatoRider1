@@ -259,7 +259,7 @@ class _DeliveryManRegistrationScreenState extends State<DeliveryManRegistrationS
                       const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 
                       CustomTextField(
-                        titleText: 'email'.tr,
+                        titleText: '${'email'.tr} ${'(optional)'.tr}',
                         controller: _emailController,
                         focusNode: _emailNode,
                         nextFocus: _passwordNode,
@@ -553,10 +553,10 @@ class _DeliveryManRegistrationScreenState extends State<DeliveryManRegistrationS
         showCustomSnackBar('enter_delivery_man_first_name'.tr);
       }else if(lName.isEmpty) {
         showCustomSnackBar('enter_delivery_man_last_name'.tr);
-      }else if(email.isEmpty) {
-        showCustomSnackBar('enter_delivery_man_email_address'.tr);
-      }else if(!GetUtils.isEmail(email)) {
-        showCustomSnackBar('enter_a_valid_email_address'.tr);
+      //}else if(email.isEmpty) {
+        //showCustomSnackBar('enter_delivery_man_email_address'.tr);
+      //}else if(!GetUtils.isEmail(email)) {
+        //showCustomSnackBar('enter_a_valid_email_address'.tr);
       }else if(phone.isEmpty) {
         showCustomSnackBar('enter_delivery_man_phone_number'.tr);
       }else if(!isValid) {

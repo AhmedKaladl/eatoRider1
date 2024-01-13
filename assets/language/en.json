@@ -262,7 +262,7 @@
   "upload_identity_image": "Upload Identity Image",
   "select_delivery_type": "Select delivery type",
   "select_vehicle": "Select vehicle",
-
+  "(optional)" : "(optional)",
   "8_or_more_character": "8 or more character",
   "1_number": "1 number",
   "1_upper_case": "1 upper case",

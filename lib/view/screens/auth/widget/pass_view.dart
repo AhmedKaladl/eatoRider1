@@ -17,13 +17,13 @@ class PassView extends StatelessWidget {
 
             view('8_or_more_character'.tr, authController.lengthCheck),
 
-            view('1_number'.tr, authController.numberCheck),
+            //view('1_number'.tr, authController.numberCheck),
 
-            view('1_upper_case'.tr, authController.uppercaseCheck),
+            //view('1_upper_case'.tr, authController.uppercaseCheck),
 
-            view('1_lower_case'.tr, authController.lowercaseCheck),
+            //view('1_lower_case'.tr, authController.lowercaseCheck),
 
-            view('1_special_character'.tr, authController.spatialCheck),
+            //view('1_special_character'.tr, authController.spatialCheck),
 
           ]),
         );
