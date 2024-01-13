@@ -63,7 +63,7 @@ class ConfirmationDialog extends StatelessWidget {
                   SizedBox(width: hasCancel ? Dimensions.paddingSizeLarge : 0),
 
                   Expanded(child: CustomButton(
-                    buttonText: isLogOut ? 'no'.tr : hasCancel ? 'yes'.tr : 'ok'.tr,
+                    buttonText: isLogOut ? 'no'.tr : hasCancel ? 'yes'.tr : 'next'.tr,
                     onPressed: () => isLogOut ? Get.back() : onYesPressed(),
                     height: 40,
                   )),

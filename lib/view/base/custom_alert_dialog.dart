@@ -28,7 +28,7 @@ class CustomAlertDialog extends StatelessWidget {
           ),
 
           CustomButton(
-            buttonText: 'ok'.tr,
+            buttonText: 'next'.tr,
             onPressed: onOkPressed,
             height: 40,
           ),
